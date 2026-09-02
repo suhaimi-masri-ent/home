@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Professional CV - Suhaimi Masri</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            transition: direction 0.3s ease;
+        }
+
+        body.rtl {
+            font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            animation: slideInUp 0.6s ease-out 0.2s both;
+        }
+
+        /* ================= LANGUAGE SELECTOR ================= */
+
+        .language-selector {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+        }
+
+        /* ================= CONTENT ================= */
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+
+        /* ================= SUMMARY ================= */
+
+        .highlight {
+            background: linear-gradient(120deg, #667eea20 0%, #764ba220 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 0;
+            animation: fadeIn 0.6s ease-out 0.3s both;
+        }
+
+        /* ================= VIEW TOGGLE ================= */
+
+        .view-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .view-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .view-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .view-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* ================= CAROUSEL ================= */
+
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .carousel-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .carousel-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .carousel-indicator {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* ================= JOB ================= */
+
+        .job-entry-carousel {
+            margin: 0;
+            padding: 30px;
+            border: none;
+        }
+
+        .job-period {
+            font-size: 0.95em;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .job-company {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 1.2em;
+            color: #764ba2;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .job-description {
+            list-style: none;
+            padding: 0;
+        }
+
+        .job-description li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .job-description li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* ================= ACCORDION ================= */
+
+        .accordion {
+            margin-bottom: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .accordion-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .accordion-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .accordion.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+            padding: 0;
+        }
+
+        .accordion.active .accordion-content {
+            max-height: 600px;
+            padding: 20px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        /* ================= RTL ================= */
+
+        html[dir="rtl"] body {
+            font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+        }
+
+        body.rtl .content,
+        body.rtl .section {
+            text-align: right;
+        }
+
+        body.rtl .job-description li {
+            padding-left: 0;
+            padding-right: 25px;
+        }
+
+        body.rtl .job-description li::before {
+            left: auto;
+            right: 0;
+            content: "◂";
+        }
+
+        body.rtl .accordion-icon {
+            margin-left: 0;
+            margin-right: 15px;
+            transform: rotate(180deg);
+        }
+
+        body.rtl .accordion.active .accordion-icon {
+            transform: rotate(0deg);
+        }
+
+        body.rtl .carousel-track {
+            direction: rtl;
+        }
+
+        body.rtl .carousel-controls {
+            direction: rtl;
+        }
+
+        /* ================= VIEW STATES ================= */
+
+        .view-carousel,
+        .view-accordion {
+            display: none;
+        }
+
+        .view-carousel.active,
+        .view-accordion.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* ================= ANIMATIONS ================= */
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            body {
+                padding: 15px 10px;
+            }
+
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .carousel-controls {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .carousel-btn {
+                flex: 1;
+                min-width: 80px;
+            }
+
+            .carousel-slide {
+                padding: 20px;
+            }
+
+            .language-selector {
+                gap: 5px;
+            }
+
+            .lang-btn {
+                padding: 7px 11px;
+                font-size: 0.82em;
+            }
+
+            .job-company {
+                font-size: 1.2em;
+            }
+
+            .job-title {
+                font-size: 1.05em;
+            }
+
+            .accordion-header {
+                padding: 14px 15px;
+            }
+
+            .accordion-content {
+                font-size: 0.95em;
+            }
+        }
+
+        /* ================= PRINT ================= */
+
+        @media print {
+
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .language-selector,
+            .view-toggle,
+            .carousel-controls {
+                display: none !important;
+            }
+
+            .view-carousel {
+                display: block !important;
+            }
+
+            .carousel-track {
+                display: block;
+                transform: none !important;
+            }
+
+            .carousel-slide {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+
+            .accordion {
+                page-break-inside: avoid;
+            }
+
+            .accordion-content {
+                max-height: none !important;
+                padding: 20px !important;
+            }
+
+            footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <h1>Suhaimi Masri</h1>
+
+        <p data-i18n="headline">
+            Global IT Infrastructure & Systems Professional
+        </p>
+
+        <!-- LANGUAGE SELECTOR -->
+
+        <div class="language-selector">
+
+            <button class="lang-btn active"
+                    type="button"
+                    data-lang="en"
+                    onclick="setLanguage('en')">
+                🇬🇧 EN
+            </button>
+
+            <button class="lang-btn"
+                    type="button"
+                    data-lang="jp"
+                    onclick="setLanguage('jp')">
+                🇯🇵 JP
+            </button>
+
+            <button class="lang-btn"
+                    type="button"
+                    data-lang="ar"
+                    onclick="setLanguage('ar')">
+                🇸🇦 AR
+            </button>
+
+            <button class="lang-btn"
+                    type="button"
+                    data-lang="my"
+                    onclick="setLanguage('my')">
+                🇲🇾 MY
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTENT ================= -->
+
+    <main class="content">
+
+        <!-- ================= SUMMARY ================= -->
+
+        <section class="section highlight">
+
+            <p data-i18n="summary">
+                Experienced IT professional with 20+ years in system
+                administration, infrastructure engineering, and IT service
+                delivery. Proven expertise in designing and implementing
+                global IT infrastructure solutions, managing cross-functional
+                teams, and driving business development initiatives. Strong
+                technical foundation combined with strategic business acumen.
+            </p>
+
+        </section>
+
+
+        <!-- ================= EXPERIENCE ================= -->
+
+        <section class="section">
+
+            <h2 class="section-title"
+                data-i18n="professionalExperience">
+                Professional Experience
+            </h2>
+
+
+            <!-- VIEW TOGGLE -->
+
+            <div class="view-toggle">
+
+                <button class="view-btn active"
+                        type="button"
+                        onclick="toggleView('carousel')"
+                        data-i18n="carouselView">
+                    📊 Carousel View
+                </button>
+
+                <button class="view-btn"
+                        type="button"
+                        onclick="toggleView('accordion')"
+                        data-i18n="accordionView">
+                    📋 Accordion View
+                </button>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- CAROUSEL VIEW -->
+            <!-- ================================================= -->
+
+            <div id="carouselView"
+                 class="view-carousel active">
+
+                <div class="carousel">
+
+                    <div class="carousel-track"
+                         id="carouselTrack">
+
+                        <!-- 2023 -->
+
+                        <article class="carousel-slide job-entry-carousel">
+
+                            <div class="job-period">
+                                2023 – Present
+                            </div>
+
+                            <div class="job-company"
+                                 data-i18n="company2023">
+                                Online Training & Assessment Company
+                            </div>
+
+                            <div class="job-title"
+                                 data-i18n="title2023">
+                                Global System Engineer – System Infrastructure Support
+                            </div>
+
+                            <ul class="job-description">
+
+                                <li data-i18n="exp2023_1">
+                                    Provide global infrastructure support for
+                                    an online training and assessment platform
+                                </li>
+
+                                <li data-i18n="exp2023_2">
+                                    Support system development, deployment,
+                                    infrastructure changes and day-to-day
+                                    operations
+                                </li>
+
+                                <li data-i18n="exp2023_3">
+                                    Troubleshoot infrastructure and
+                                    application-related incidents and
+                                    coordinate technical resolution
+                                </li>
+
+                                <li data-i18n="exp2023_4">
+                                    Participate in Change, Incident and
+                                    Service Request Management activities
+                                </li>
+
+                                <li data-i18n="exp2023_5">
+                                    Support infrastructure improvements,
+                                    system reliability and transition of
+                                    new services into operations
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+
+                        <!-- 2017 -->
+
+                        <article class="carousel-slide job-entry-carousel">
+
+                            <div class="job-period">
+                                2017 – 2023
+                            </div>
+
+                            <div class="job-company"
+                                 data-i18n="company2017">
+                                Japan IT Service Company, Malaysia
+                            </div>
+
+                            <div class="job-title"
+                                 data-i18n="title2017">
+                                General Manager – Business Development Division
+                            </div>
+
+                            <ul class="job-description">
+
+                                <li data-i18n="exp2017_1">
+                                    Led Business Development, focusing on
+                                    identifying IT business opportunities and
+                                    developing solutions for customers
+                                </li>
+
+                                <li data-i18n="exp2017_2">
+                                    Involved in software development and IT
+                                    infrastructure projects, from business
+                                    requirements and solution proposals
+                                    through project coordination and
+                                    implementation
+                                </li>
+
+                                <li data-i18n="exp2017_3">
+                                    Involved in various IT projects covering
+                                    software development, IT infrastructure
+                                    and enterprise technology solutions for
+                                    corporate and government-linked customers
+                                </li>
+
+                                <li data-i18n="exp2017_4">
+                                    Coordinated Japanese and Malaysian
+                                    stakeholders, bridging business
+                                    requirements, technical teams and
+                                    management
+                                </li>
+
+                                <li data-i18n="exp2017_5">
+                                    Supported business development through
+                                    solution proposals, project estimation,
+                                    commercial discussions and customer
+                                    engagement
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+
+                        <!-- 2014 -->
+
+                        <article class="carousel-slide job-entry-carousel">
+
+                            <div class="job-period">
+                                2014 – 2017
+                            </div>
+
+                            <div class="job-company"
+                                 data-i18n="company2014">
+                                IT Service Delivery Company
+                            </div>
+
+                            <div class="job-title"
+                                 data-i18n="title2014">
+                                Global IT Infrastructure Manager – Service Delivery
+                            </div>
+
+                            <ul class="job-description">
+
+                                <li data-i18n="exp2014_1">
+                                    Managed global IT infrastructure services
+                                    supporting a Travel & Tour Operation System
+                                </li>
+
+                                <li data-i18n="exp2014_2">
+                                    Responsible for infrastructure operations
+                                    across Windows, IBM AS/400, ManageEngine
+                                    and AWS environments
+                                </li>
+
+                                <li data-i18n="exp2014_3">
+                                    Managed Incident, Change, Problem and
+                                    Service Request Management in line with
+                                    ITIL practices
+                                </li>
+
+                                <li data-i18n="exp2014_4">
+                                    Monitored SLA, KPI, service availability
+                                    and operational performance
+                                </li>
+
+                                <li data-i18n="exp2014_5">
+                                    Coordinated infrastructure changes, major
+                                    incidents and service restoration
+                                    activities
+                                </li>
+
+                                <li data-i18n="exp2014_6">
+                                    Managed infrastructure projects and
+                                    improvements from planning and
+                                    implementation through to operational
+                                    support
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+
+                        <!-- 2004 -->
+
+                        <article class="carousel-slide job-entry-carousel">
+
+                            <div class="job-period">
+                                2004 – 2014
+                            </div>
+
+                            <div class="job-company"
+                                 data-i18n="company2004">
+                                Automotive Manufacturing Company
+                            </div>
+
+                            <div class="job-title"
+                                 data-i18n="title2004">
+                                IT Engineering Department – Infrastructure & Engineering Systems
+                            </div>
+
+                            <ul class="job-description">
+
+                                <li data-i18n="exp2004_1">
+                                    Supported internal and partner IT
+                                    infrastructure, engineering applications
+                                    and software development environments
+                                </li>
+
+                                <li data-i18n="exp2004_2">
+                                    Designed and implemented infrastructure
+                                    solutions for new systems and IT projects
+                                </li>
+
+                                <li data-i18n="exp2004_3">
+                                    Involved in the full project lifecycle,
+                                    including technical design,
+                                    implementation, testing, deployment and
+                                    operational handover
+                                </li>
+
+                                <li data-i18n="exp2004_4">
+                                    Managed infrastructure changes, upgrades
+                                    and technical issues while maintaining
+                                    system stability and availability
+                                </li>
+
+                                <li data-i18n="exp2004_5">
+                                    Provided hands-on technical support for
+                                    business-critical engineering systems
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+
+                        <!-- 2002 -->
+
+                        <article class="carousel-slide job-entry-carousel">
+
+                            <div class="job-period">
+                                2002 – 2004
+                            </div>
+
+                            <div class="job-company"
+                                 data-i18n="company2002">
+                                IT Managed Service Company
+                            </div>
+
+                            <div class="job-title"
+                                 data-i18n="title2002">
+                                System Analyst & 1st Level Support – APAC Region
+                            </div>
+
+                            <ul class="job-description">
+
+                                <li data-i18n="exp2002_1">
+                                    Provided 1st-level support for APAC system
+                                    infrastructure covering Windows/Unix,
+                                    Network & Security, DR and SAN/Storage
+                                </li>
+
+                                <li data-i18n="exp2002_2">
+                                    Managed incidents, troubleshooting and
+                                    escalation in accordance with SLA and
+                                    service management procedures
+                                </li>
+
+                                <li data-i18n="exp2002_3">
+                                    Supported infrastructure availability,
+                                    monitoring and operational continuity
+                                </li>
+
+                                <li data-i18n="exp2002_4">
+                                    Participated in Incident, Change and
+                                    Service Request Management within an
+                                    ITIL-based environment
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+
+                        <!-- 2001 -->
+
+                        <article class="carousel-slide job-entry-carousel">
+
+                            <div class="job-period">
+                                2001
+                            </div>
+
+                            <div class="job-company"
+                                 data-i18n="company2001">
+                                PCB & Semiconductor Manufacturing Company
+                            </div>
+
+                            <div class="job-title"
+                                 data-i18n="title2001">
+                                System Administrator / Sales Engineer / PCB Design Engineer
+                            </div>
+
+                            <ul class="job-description">
+
+                                <li data-i18n="exp2001_1">
+                                    Supported system administration and
+                                    engineering environments for electrical
+                                    and electronic design operations
+                                </li>
+
+                                <li data-i18n="exp2001_2">
+                                    Installed, configured and supported HP-UX
+                                    systems and CAD design environments
+                                </li>
+
+                                <li data-i18n="exp2001_3">
+                                    Provided system setup, scripting,
+                                    engineering data-library management and
+                                    technical troubleshooting
+                                </li>
+
+                                <li data-i18n="exp2001_4">
+                                    Coordinated with suppliers and customers
+                                    to understand technical requirements and
+                                    support engineering solutions
+                                </li>
+
+                                <li data-i18n="exp2001_5">
+                                    Prepared and maintained technical
+                                    documentation, work procedures and
+                                    project schedules
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- CAROUSEL CONTROLS -->
+
+                    <div class="carousel-controls">
+
+                        <button class="carousel-btn"
+                                type="button"
+                                onclick="prevSlide()"
+                                data-i18n="previous">
+                            ← Previous
+                        </button>
+
+                        <span class="carousel-indicator">
+                            <span id="currentSlide">1</span>
+                            /
+                            <span id="totalSlides">6</span>
+                        </span>
+
+                        <button class="carousel-btn"
+                                type="button"
+                                onclick="nextSlide()"
+                                data-i18n="next">
+                            Next →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- ACCORDION VIEW -->
+            <!-- ================================================= -->
+
+            <div id="accordionView"
+                 class="view-accordion">
+
+                <!-- 2023 -->
+
+                <div class="accordion active">
+
+                    <div class="accordion-header"
+                         onclick="toggleAccordion(this.parentElement)">
+
+                        <span>
+                            2023 – Present |
+                            <span data-i18n="company2023">
+                                Online Training & Assessment Company
+                            </span>
+                        </span>
+
+                        <span class="accordion-icon">▼</span>
+
+                    </div>
+
+                    <div class="accordion-content">
+
+                        <div class="job-title"
+                             data-i18n="title2023">
+                            Global System Engineer – System Infrastructure Support
+                        </div>
+
+                        <ul class="job-description">
+
+                            <li data-i18n="exp2023_1">
+                                Provide global infrastructure support for an
+                                online training and assessment platform
+                            </li>
+
+                            <li data-i18n="exp2023_2">
+                                Support system development, deployment,
+                                infrastructure changes and day-to-day
+                                operations
+                            </li>
+
+                            <li data-i18n="exp2023_3">
+                                Troubleshoot infrastructure and
+                                application-related incidents and coordinate
+                                technical resolution
+                            </li>
+
+                            <li data-i18n="exp2023_4">
+                                Participate in Change, Incident and Service
+                                Request Management activities
+                            </li>
+
+                            <li data-i18n="exp2023_5">
+                                Support infrastructure improvements, system
+                                reliability and transition of new services
+                                into operations
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2017 -->
+
+                <div class="accordion">
+
+                    <div class="accordion-header"
+                         onclick="toggleAccordion(this.parentElement)">
+
+                        <span>
+                            2017 – 2023 |
+                            <span data-i18n="company2017">
+                                Japan IT Service Company, Malaysia
+                            </span>
+                        </span>
+
+                        <span class="accordion-icon">▼</span>
+
+                    </div>
+
+                    <div class="accordion-content">
+
+                        <div class="job-title"
+                             data-i18n="title2017">
+                            General Manager – Business Development Division
+                        </div>
+
+                        <ul class="job-description">
+
+                            <li data-i18n="exp2017_1">
+                                Led Business Development, focusing on
+                                identifying IT business opportunities and
+                                developing solutions for customers
+                            </li>
+
+                            <li data-i18n="exp2017_2">
+                                Involved in software development and IT
+                                infrastructure projects, from business
+                                requirements and solution proposals through
+                                project coordination and implementation
+                            </li>
+
+                            <li data-i18n="exp2017_3">
+                                Involved in various IT projects covering
+                                software development, IT infrastructure and
+                                enterprise technology solutions for corporate
+                                and government-linked customers
+                            </li>
+
+                            <li data-i18n="exp2017_4">
+                                Coordinated Japanese and Malaysian
+                                stakeholders, bridging business requirements,
+                                technical teams and management
+                            </li>
+
+                            <li data-i18n="exp2017_5">
+                                Supported business development through solution
+                                proposals, project estimation, commercial
+                                discussions and customer engagement
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2014 -->
+
+                <div class="accordion">
+
+                    <div class="accordion-header"
+                         onclick="toggleAccordion(this.parentElement)">
+
+                        <span>
+                            2014 – 2017 |
+                            <span data-i18n="company2014">
+                                IT Service Delivery Company
+                            </span>
+                        </span>
+
+                        <span class="accordion-icon">▼</span>
+
+                    </div>
+
+                    <div class="accordion-content">
+
+                        <div class="job-title"
+                             data-i18n="title2014">
+                            Global IT Infrastructure Manager – Service Delivery
+                        </div>
+
+                        <ul class="job-description">
+
+                            <li data-i18n="exp2014_1">
+                                Managed global IT infrastructure services
+                                supporting a Travel & Tour Operation System
+                            </li>
+
+                            <li data-i18n="exp2014_2">
+                                Responsible for infrastructure operations
+                                across Windows, IBM AS/400, ManageEngine and
+                                AWS environments
+                            </li>
+
+                            <li data-i18n="exp2014_3">
+                                Managed Incident, Change, Problem and Service
+                                Request Management in line with ITIL practices
+                            </li>
+
+                            <li data-i18n="exp2014_4">
+                                Monitored SLA, KPI, service availability and
+                                operational performance
+                            </li>
+
+                            <li data-i18n="exp2014_5">
+                                Coordinated infrastructure changes, major
+                                incidents and service restoration activities
+                            </li>
+
+                            <li data-i18n="exp2014_6">
+                                Managed infrastructure projects and
+                                improvements from planning and implementation
+                                through to operational support
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2004 -->
+
+                <div class="accordion">
+
+                    <div class="accordion-header"
+                         onclick="toggleAccordion(this.parentElement)">
+
+                        <span>
+                            2004 – 2014 |
+                            <span data-i18n="company2004">
+                                Automotive Manufacturing Company
+                            </span>
+                        </span>
+
+                        <span class="accordion-icon">▼</span>
+
+                    </div>
+
+                    <div class="accordion-content">
+
+                        <div class="job-title"
+                             data-i18n="title2004">
+                            IT Engineering Department – Infrastructure & Engineering Systems
+                        </div>
+
+                        <ul class="job-description">
+
+                            <li data-i18n="exp2004_1">
+                                Supported internal and partner IT
+                                infrastructure, engineering applications and
+                                software development environments
+                            </li>
+
+                            <li data-i18n="exp2004_2">
+                                Designed and implemented infrastructure
+                                solutions for new systems and IT projects
+                            </li>
+
+                            <li data-i18n="exp2004_3">
+                                Involved in the full project lifecycle,
+                                including technical design, implementation,
+                                testing, deployment and operational handover
+                            </li>
+
+                            <li data-i18n="exp2004_4">
+                                Managed infrastructure changes, upgrades and
+                                technical issues while maintaining system
+                                stability and availability
+                            </li>
+
+                            <li data-i18n="exp2004_5">
+                                Provided hands-on technical support for
+                                business-critical engineering systems
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2002 -->
+
+                <div class="accordion">
+
+                    <div class="accordion-header"
+                         onclick="toggleAccordion(this.parentElement)">
+
+                        <span>
+                            2002 – 2004 |
+                            <span data-i18n="company2002">
+                                IT Managed Service Company
+                            </span>
+                        </span>
+
+                        <span class="accordion-icon">▼</span>
+
+                    </div>
+
+                    <div class="accordion-content">
+
+                        <div class="job-title"
+                             data-i18n="title2002">
+                            System Analyst & 1st Level Support – APAC Region
+                        </div>
+
+                        <ul class="job-description">
+
+                            <li data-i18n="exp2002_1">
+                                Provided 1st-level support for APAC system
+                                infrastructure covering Windows/Unix,
+                                Network & Security, DR and SAN/Storage
+                            </li>
+
+                            <li data-i18n="exp2002_2">
+                                Managed incidents, troubleshooting and
+                                escalation in accordance with SLA and service
+                                management procedures
+                            </li>
+
+                            <li data-i18n="exp2002_3">
+                                Supported infrastructure availability,
+                                monitoring and operational continuity
+                            </li>
+
+                            <li data-i18n="exp2002_4">
+                                Participated in Incident, Change and Service
+                                Request Management within an ITIL-based
+                                environment
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2001 -->
+
+                <div class="accordion">
+
+                    <div class="accordion-header"
+                         onclick="toggleAccordion(this.parentElement)">
+
+                        <span>
+                            2001 |
+                            <span data-i18n="company2001">
+                                PCB & Semiconductor Manufacturing Company
+                            </span>
+                        </span>
+
+                        <span class="accordion-icon">▼</span>
+
+                    </div>
+
+                    <div class="accordion-content">
+
+                        <div class="job-title"
+                             data-i18n="title2001">
+                            System Administrator / Sales Engineer / PCB Design Engineer
+                        </div>
+
+                        <ul class="job-description">
+
+                            <li data-i18n="exp2001_1">
+                                Supported system administration and
+                                engineering environments for electrical and
+                                electronic design operations
+                            </li>
+
+                            <li data-i18n="exp2001_2">
+                                Installed, configured and supported HP-UX
+                                systems and CAD design environments
+                            </li>
+
+                            <li data-i18n="exp2001_3">
+                                Provided system setup, scripting, engineering
+                                data-library management and technical
+                                troubleshooting
+                            </li>
+
+                            <li data-i18n="exp2001_4">
+                                Coordinated with suppliers and customers to
+                                understand technical requirements and support
+                                engineering solutions
+                            </li>
+
+                            <li data-i18n="exp2001_5">
+                                Prepared and maintained technical
+                                documentation, work procedures and project
+                                schedules
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Suhaimi Masri.
+            <span data-i18n="rights">
+                All rights reserved.
+            </span>
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   TRANSLATIONS
+   ========================================================= */
+
+const translations = {
+
+    /* =====================================================
+       ENGLISH
+       ===================================================== */
+
+    en: {
+
+        headline:
+            "Global IT Infrastructure & Systems Professional",
+
+        summary:
+            "Experienced IT professional with 20+ years in system administration, infrastructure engineering, and IT service delivery. Proven expertise in designing and implementing global IT infrastructure solutions, managing cross-functional teams, and driving business development initiatives. Strong technical foundation combined with strategic business acumen.",
+
+        professionalExperience:
+            "Professional Experience",
+
+        carouselView:
+            "📊 Carousel View",
+
+        accordionView:
+            "📋 Accordion View",
+
+        previous:
+            "← Previous",
+
+        next:
+            "Next →",
+
+        rights:
+            "All rights reserved.",
+
+
+        company2023:
+            "Online Training & Assessment Company",
+
+        title2023:
+            "Global System Engineer – System Infrastructure Support",
+
+        exp2023_1:
+            "Provide global infrastructure support for an online training and assessment platform",
+
+        exp2023_2:
+            "Support system development, deployment, infrastructure changes and day-to-day operations",
+
+        exp2023_3:
+            "Troubleshoot infrastructure and application-related incidents and coordinate technical resolution",
+
+        exp2023_4:
+            "Participate in Change, Incident and Service Request Management activities",
+
+        exp2023_5:
+            "Support infrastructure improvements, system reliability and transition of new services into operations",
+
+
+        company2017:
+            "Japan IT Service Company, Malaysia",
+
+        title2017:
+            "General Manager – Business Development Division",
+
+        exp2017_1:
+            "Led Business Development, focusing on identifying IT business opportunities and developing solutions for customers",
+
+        exp2017_2:
+            "Involved in software development and IT infrastructure projects, from business requirements and solution proposals through project coordination and implementation",
+
+        exp2017_3:
+            "Involved in various IT projects covering software development, IT infrastructure and enterprise technology solutions for corporate and government-linked customers",
+
+        exp2017_4:
+            "Coordinated Japanese and Malaysian stakeholders, bridging business requirements, technical teams and management",
+
+        exp2017_5:
+            "Supported business development through solution proposals, project estimation, commercial discussions and customer engagement",
+
+
+        company2014:
+            "IT Service Delivery Company",
+
+        title2014:
+            "Global IT Infrastructure Manager – Service Delivery",
+
+        exp2014_1:
+            "Managed global IT infrastructure services supporting a Travel & Tour Operation System",
+
+        exp2014_2:
+            "Responsible for infrastructure operations across Windows, IBM AS/400, ManageEngine and AWS environments",
+
+        exp2014_3:
+            "Managed Incident, Change, Problem and Service Request Management in line with ITIL practices",
+
+        exp2014_4:
+            "Monitored SLA, KPI, service availability and operational performance",
+
+        exp2014_5:
+            "Coordinated infrastructure changes, major incidents and service restoration activities",
+
+        exp2014_6:
+            "Managed infrastructure projects and improvements from planning and implementation through to operational support",
+
+
+        company2004:
+            "Automotive Manufacturing Company",
+
+        title2004:
+            "IT Engineering Department – Infrastructure & Engineering Systems",
+
+        exp2004_1:
+            "Supported internal and partner IT infrastructure, engineering applications and software development environments",
+
+        exp2004_2:
+            "Designed and implemented infrastructure solutions for new systems and IT projects",
+
+        exp2004_3:
+            "Involved in the full project lifecycle, including technical design, implementation, testing, deployment and operational handover",
+
+        exp2004_4:
+            "Managed infrastructure changes, upgrades and technical issues while maintaining system stability and availability",
+
+        exp2004_5:
+            "Provided hands-on technical support for business-critical engineering systems",
+
+
+        company2002:
+            "IT Managed Service Company",
+
+        title2002:
+            "System Analyst & 1st Level Support – APAC Region",
+
+        exp2002_1:
+            "Provided 1st-level support for APAC system infrastructure covering Windows/Unix, Network & Security, DR and SAN/Storage",
+
+        exp2002_2:
+            "Managed incidents, troubleshooting and escalation in accordance with SLA and service management procedures",
+
+        exp2002_3:
+            "Supported infrastructure availability, monitoring and operational continuity",
+
+        exp2002_4:
+            "Participated in Incident, Change and Service Request Management within an ITIL-based environment",
+
+
+        company2001:
+            "PCB & Semiconductor Manufacturing Company",
+
+        title2001:
+            "System Administrator / Sales Engineer / PCB Design Engineer",
+
+        exp2001_1:
+            "Supported system administration and engineering environments for electrical and electronic design operations",
+
+        exp2001_2:
+            "Installed, configured and supported HP-UX systems and CAD design environments",
+
+        exp2001_3:
+            "Provided system setup, scripting, engineering data-library management and technical troubleshooting",
+
+        exp2001_4:
+            "Coordinated with suppliers and customers to understand technical requirements and support engineering solutions",
+
+        exp2001_5:
+            "Prepared and maintained technical documentation, work procedures and project schedules"
+    },
+
+
+    /* =====================================================
+       JAPANESE
+       ===================================================== */
+
+    jp: {
+
+        headline:
+            "グローバルITインフラストラクチャ & システム・プロフェッショナル",
+
+        summary:
+            "システム管理、ITインフラストラクチャ、ITサービスデリバリーにおいて20年以上の経験を持つITプロフェッショナル。グローバルITインフラの設計・導入、部門横断チームの管理、ITビジネス開発において実績を有しています。高度な技術力とビジネス戦略を組み合わせ、技術とビジネス双方の視点からITソリューションを推進してきました。",
+
+        professionalExperience:
+            "職務経歴",
+
+        carouselView:
+            "📊 カルーセル表示",
+
+        accordionView:
+            "📋 アコーディオン表示",
+
+        previous:
+            "← 前へ",
+
+        next:
+            "次へ →",
+
+        rights:
+            "無断転載を禁じます。",
+
+
+        company2023:
+            "オンライン研修・アセスメント企業",
+
+        title2023:
+            "グローバル・システムエンジニア – システムインフラストラクチャ・サポート",
+
+        exp2023_1:
+            "オンライン研修・アセスメントプラットフォームのグローバルITインフラストラクチャをサポート",
+
+        exp2023_2:
+            "システム開発、展開、インフラ変更および日常運用をサポート",
+
+        exp2023_3:
+            "インフラストラクチャおよびアプリケーション関連のインシデントを調査し、技術的な解決を推進",
+
+        exp2023_4:
+            "Change、Incident、Service Request Managementに関する業務に参加",
+
+        exp2023_5:
+            "インフラ改善、システム信頼性向上、新サービスの運用移行をサポート",
+
+
+        company2017:
+            "日本系ITサービス企業・マレーシア",
+
+        title2017:
+            "ゼネラルマネージャー – ビジネス開発部門",
+
+        exp2017_1:
+            "ITビジネス機会の発掘および顧客向けソリューション開発を中心としたビジネス開発をリード",
+
+        exp2017_2:
+            "業務要件、ソリューション提案からプロジェクト調整・導入まで、ソフトウェア開発およびITインフラプロジェクトに参画",
+
+        exp2017_3:
+            "企業および政府系組織向けに、ソフトウェア開発、ITインフラおよびエンタープライズITソリューションに関する各種ITプロジェクトに参画",
+
+        exp2017_4:
+            "日本およびマレーシアの関係者を調整し、業務要件、技術チームおよび経営層の橋渡しを担当",
+
+        exp2017_5:
+            "ソリューション提案、プロジェクト見積、商談および顧客対応を通じてビジネス開発を支援",
+
+
+        company2014:
+            "ITサービスデリバリー企業",
+
+        title2014:
+            "グローバルITインフラストラクチャ・マネージャー – サービスデリバリー",
+
+        exp2014_1:
+            "旅行・ツアー業務システムを支えるグローバルITインフラサービスを管理",
+
+        exp2014_2:
+            "Windows、IBM AS/400、ManageEngine、AWS環境におけるインフラ運用を担当",
+
+        exp2014_3:
+            "ITILプラクティスに基づき、Incident、Change、Problem、Service Request Managementを管理",
+
+        exp2014_4:
+            "SLA、KPI、サービス可用性および運用パフォーマンスを監視",
+
+        exp2014_5:
+            "インフラ変更、重大インシデントおよびサービス復旧活動を調整",
+
+        exp2014_6:
+            "計画・導入から運用サポートまで、インフラプロジェクトおよび改善活動を管理",
+
+
+        company2004:
+            "自動車製造企業",
+
+        title2004:
+            "ITエンジニアリング部門 – インフラストラクチャ & エンジニアリングシステム",
+
+        exp2004_1:
+            "社内およびパートナー向けITインフラ、エンジニアリングアプリケーション、ソフトウェア開発環境をサポート",
+
+        exp2004_2:
+            "新規システムおよびITプロジェクト向けのインフラソリューションを設計・導入",
+
+        exp2004_3:
+            "技術設計、導入、テスト、展開、運用引継ぎを含むプロジェクトライフサイクル全体に参画",
+
+        exp2004_4:
+            "システムの安定性と可用性を維持しながら、インフラ変更、アップグレードおよび技術課題を管理",
+
+        exp2004_5:
+            "ビジネスクリティカルなエンジニアリングシステムに対して実践的な技術サポートを提供",
+
+
+        company2002:
+            "ITマネージドサービス企業",
+
+        title2002:
+            "システムアナリスト & 1次レベルサポート – APAC地域",
+
+        exp2002_1:
+            "Windows/Unix、ネットワーク・セキュリティ、DR、SAN/Storageを含むAPACシステムインフラの1次レベルサポートを担当",
+
+        exp2002_2:
+            "SLAおよびサービス管理手順に基づき、インシデント、トラブルシューティングおよびエスカレーションを管理",
+
+        exp2002_3:
+            "インフラストラクチャの可用性、監視および運用継続性をサポート",
+
+        exp2002_4:
+            "ITILベースの環境でIncident、Change、Service Request Managementに参加",
+
+
+        company2001:
+            "PCB・半導体製造企業",
+
+        title2001:
+            "システム管理者 / セールスエンジニア / PCB設計エンジニア",
+
+        exp2001_1:
+            "電気・電子設計業務のためのシステム管理およびエンジニアリング環境をサポート",
+
+        exp2001_2:
+            "HP-UXシステムおよびCAD設計環境の導入、設定、サポートを担当",
+
+        exp2001_3:
+            "システムセットアップ、スクリプト作成、エンジニアリングデータライブラリ管理および技術トラブルシューティングを実施",
+
+        exp2001_4:
+            "サプライヤーおよび顧客と連携し、技術要件を把握してエンジニアリングソリューションを支援",
+
+        exp2001_5:
+            "技術文書、作業手順書およびプロジェクトスケジュールを作成・管理"
+    },
+
+
+    /* =====================================================
+       ARABIC
+       ===================================================== */
+
+    ar: {
+
+        headline:
+            "متخصص في البنية التحتية العالمية لتقنية المعلومات والأنظمة",
+
+        summary:
+            "متخصص في تقنية المعلومات بخبرة تزيد عن 20 عاماً في إدارة الأنظمة، وهندسة البنية التحتية، وتسليم خدمات تقنية المعلومات. خبرة مثبتة في تصميم وتنفيذ حلول البنية التحتية العالمية، وإدارة الفرق متعددة التخصصات، وتطوير الأعمال التقنية. أجمع بين الخبرة التقنية القوية والفهم الاستراتيجي للأعمال.",
+
+        professionalExperience:
+            "الخبرة المهنية",
+
+        carouselView:
+            "📊 عرض الشرائح",
+
+        accordionView:
+            "📋 العرض القابل للطي",
+
+        previous:
+            "→ السابق",
+
+        next:
+            "التالي ←",
+
+        rights:
+            "جميع الحقوق محفوظة.",
+
+
+        company2023:
+            "شركة للتدريب والتقييم عبر الإنترنت",
+
+        title2023:
+            "مهندس أنظمة عالمي – دعم البنية التحتية للأنظمة",
+
+        exp2023_1:
+            "تقديم الدعم العالمي للبنية التحتية لمنصة التدريب والتقييم عبر الإنترنت",
+
+        exp2023_2:
+            "دعم تطوير الأنظمة ونشرها وإجراء تغييرات البنية التحتية والعمليات اليومية",
+
+        exp2023_3:
+            "استكشاف ومعالجة الحوادث المتعلقة بالبنية التحتية والتطبيقات والتنسيق للوصول إلى الحلول التقنية",
+
+        exp2023_4:
+            "المشاركة في إدارة التغيير والحوادث وطلبات الخدمة",
+
+        exp2023_5:
+            "دعم تحسين البنية التحتية وموثوقية الأنظمة ونقل الخدمات الجديدة إلى بيئة التشغيل",
+
+
+        company2017:
+            "شركة خدمات تقنية معلومات يابانية – ماليزيا",
+
+        title2017:
+            "مدير عام – قسم تطوير الأعمال",
+
+        exp2017_1:
+            "قيادة تطوير الأعمال مع التركيز على تحديد فرص أعمال تقنية المعلومات وتطوير الحلول للعملاء",
+
+        exp2017_2:
+            "المشاركة في مشاريع تطوير البرمجيات والبنية التحتية لتقنية المعلومات، بدءاً من متطلبات الأعمال ومقترحات الحلول وحتى تنسيق وتنفيذ المشاريع",
+
+        exp2017_3:
+            "المشاركة في مشاريع تقنية معلومات متنوعة تشمل تطوير البرمجيات والبنية التحتية وحلول تقنية المؤسسات للعملاء من الشركات والجهات المرتبطة بالحكومة",
+
+        exp2017_4:
+            "تنسيق أصحاب المصلحة اليابانيين والماليزيين وربط متطلبات الأعمال بالفرق التقنية والإدارة",
+
+        exp2017_5:
+            "دعم تطوير الأعمال من خلال مقترحات الحلول وتقدير المشاريع والمناقشات التجارية والتواصل مع العملاء",
+
+
+        company2014:
+            "شركة لتقديم خدمات تقنية المعلومات",
+
+        title2014:
+            "مدير البنية التحتية العالمية لتقنية المعلومات – تسليم الخدمات",
+
+        exp2014_1:
+            "إدارة خدمات البنية التحتية العالمية لتقنية المعلومات التي تدعم نظام عمليات السفر والسياحة",
+
+        exp2014_2:
+            "المسؤولية عن عمليات البنية التحتية عبر بيئات Windows وIBM AS/400 وManageEngine وAWS",
+
+        exp2014_3:
+            "إدارة الحوادث والتغيير والمشكلات وطلبات الخدمة وفقاً لممارسات ITIL",
+
+        exp2014_4:
+            "مراقبة اتفاقيات مستوى الخدمة ومؤشرات الأداء وتوافر الخدمات والأداء التشغيلي",
+
+        exp2014_5:
+            "تنسيق تغييرات البنية التحتية والحوادث الكبرى وأنشطة استعادة الخدمة",
+
+        exp2014_6:
+            "إدارة مشاريع وتحسينات البنية التحتية من مرحلة التخطيط والتنفيذ وحتى الدعم التشغيلي",
+
+
+        company2004:
+            "شركة لتصنيع السيارات",
+
+        title2004:
+            "قسم هندسة تقنية المعلومات – البنية التحتية والأنظمة الهندسية",
+
+        exp2004_1:
+            "دعم البنية التحتية الداخلية وبنية الشركاء وتطبيقات الهندسة وبيئات تطوير البرمجيات",
+
+        exp2004_2:
+            "تصميم وتنفيذ حلول البنية التحتية للأنظمة الجديدة ومشاريع تقنية المعلومات",
+
+        exp2004_3:
+            "المشاركة في دورة حياة المشاريع بالكامل، بما في ذلك التصميم التقني والتنفيذ والاختبار والنشر وتسليم الأنظمة إلى التشغيل",
+
+        exp2004_4:
+            "إدارة تغييرات البنية التحتية والترقيات والمشكلات التقنية مع الحفاظ على استقرار الأنظمة وتوافرها",
+
+        exp2004_5:
+            "تقديم الدعم التقني العملي للأنظمة الهندسية الحيوية للأعمال",
+
+
+        company2002:
+            "شركة خدمات تقنية معلومات مُدارة",
+
+        title2002:
+            "محلل نظم ودعم المستوى الأول – منطقة آسيا والمحيط الهادئ",
+
+        exp2002_1:
+            "تقديم دعم المستوى الأول للبنية التحتية للأنظمة في منطقة آسيا والمحيط الهادئ، بما يشمل Windows/Unix والشبكات والأمن والتعافي من الكوارث وSAN/Storage",
+
+        exp2002_2:
+            "إدارة الحوادث واستكشاف الأخطاء وإصلاحها والتصعيد وفقاً لاتفاقيات مستوى الخدمة وإجراءات إدارة الخدمات",
+
+        exp2002_3:
+            "دعم توافر البنية التحتية والمراقبة واستمرارية العمليات",
+
+        exp2002_4:
+            "المشاركة في إدارة الحوادث والتغيير وطلبات الخدمة ضمن بيئة تعتمد على ITIL",
+
+
+        company2001:
+            "شركة لتصنيع لوحات الدوائر الإلكترونية وأشباه الموصلات",
+
+        title2001:
+            "مسؤول أنظمة / مهندس مبيعات / مهندس تصميم PCB",
+
+        exp2001_1:
+            "دعم إدارة الأنظمة وبيئات الهندسة الخاصة بعمليات التصميم الكهربائي والإلكتروني",
+
+        exp2001_2:
+            "تثبيت وإعداد ودعم أنظمة HP-UX وبيئات تصميم CAD",
+
+        exp2001_3:
+            "توفير إعداد الأنظمة والبرمجة النصية وإدارة مكتبات البيانات الهندسية واستكشاف الأخطاء التقنية",
+
+        exp2001_4:
+            "التنسيق مع الموردين والعملاء لفهم المتطلبات التقنية ودعم الحلول الهندسية",
+
+        exp2001_5:
+            "إعداد وإدارة الوثائق التقنية وإجراءات العمل والجداول الزمنية للمشاريع"
+    },
+
+
+    /* =====================================================
+       MALAY
+       ===================================================== */
+
+    my: {
+
+        headline:
+            "Profesional Infrastruktur IT & Sistem Global",
+
+        summary:
+            "Profesional IT berpengalaman dengan lebih 20 tahun pengalaman dalam pentadbiran sistem, kejuruteraan infrastruktur dan penyampaian perkhidmatan IT. Mempunyai pengalaman dalam mereka bentuk dan melaksanakan penyelesaian infrastruktur IT global, mengurus pasukan merentas fungsi serta memacu inisiatif pembangunan perniagaan. Menggabungkan asas teknikal yang kukuh dengan pemahaman strategik terhadap keperluan perniagaan.",
+
+        professionalExperience:
+            "Pengalaman Profesional",
+
+        carouselView:
+            "📊 Paparan Carousel",
+
+        accordionView:
+            "📋 Paparan Accordion",
+
+        previous:
+            "← Sebelumnya",
+
+        next:
+            "Seterusnya →",
+
+        rights:
+            "Hak cipta terpelihara.",
+
+
+        company2023:
+            "Syarikat Latihan & Penilaian Dalam Talian",
+
+        title2023:
+            "Jurutera Sistem Global – Sokongan Infrastruktur Sistem",
+
+        exp2023_1:
+            "Memberikan sokongan infrastruktur global untuk platform latihan dan penilaian dalam talian",
+
+        exp2023_2:
+            "Menyokong pembangunan sistem, deployment, perubahan infrastruktur dan operasi harian",
+
+        exp2023_3:
+            "Menyelesaikan insiden berkaitan infrastruktur dan aplikasi serta menyelaras penyelesaian teknikal",
+
+        exp2023_4:
+            "Terlibat dalam aktiviti Change, Incident dan Service Request Management",
+
+        exp2023_5:
+            "Menyokong penambahbaikan infrastruktur, kebolehpercayaan sistem dan peralihan perkhidmatan baharu ke operasi",
+
+
+        company2017:
+            "Syarikat Perkhidmatan IT Jepun, Malaysia",
+
+        title2017:
+            "Pengurus Besar – Bahagian Pembangunan Perniagaan",
+
+        exp2017_1:
+            "Memimpin pembangunan perniagaan dengan memberi tumpuan kepada peluang perniagaan IT dan pembangunan penyelesaian untuk pelanggan",
+
+        exp2017_2:
+            "Terlibat dalam projek pembangunan perisian dan infrastruktur IT, daripada keperluan perniagaan dan cadangan penyelesaian sehingga penyelarasan serta pelaksanaan projek",
+
+        exp2017_3:
+            "Terlibat dalam pelbagai projek IT meliputi pembangunan perisian, infrastruktur IT dan penyelesaian teknologi perusahaan untuk pelanggan korporat dan organisasi berkaitan kerajaan",
+
+        exp2017_4:
+            "Menyelaras pihak berkepentingan Jepun dan Malaysia serta menjadi penghubung antara keperluan perniagaan, pasukan teknikal dan pihak pengurusan",
+
+        exp2017_5:
+            "Menyokong pembangunan perniagaan melalui cadangan penyelesaian, anggaran projek, perbincangan komersial dan penglibatan pelanggan",
+
+
+        company2014:
+            "Syarikat Penyampaian Perkhidmatan IT",
+
+        title2014:
+            "Pengurus Infrastruktur IT Global – Service Delivery",
+
+        exp2014_1:
+            "Mengurus perkhidmatan infrastruktur IT global yang menyokong Sistem Operasi Travel & Tour",
+
+        exp2014_2:
+            "Bertanggungjawab terhadap operasi infrastruktur merangkumi persekitaran Windows, IBM AS/400, ManageEngine dan AWS",
+
+        exp2014_3:
+            "Mengurus Incident, Change, Problem dan Service Request Management berdasarkan amalan ITIL",
+
+        exp2014_4:
+            "Memantau SLA, KPI, ketersediaan perkhidmatan dan prestasi operasi",
+
+        exp2014_5:
+            "Menyelaras perubahan infrastruktur, major incident dan aktiviti pemulihan perkhidmatan",
+
+        exp2014_6:
+            "Mengurus projek dan penambahbaikan infrastruktur daripada perancangan dan pelaksanaan sehingga sokongan operasi",
+
+
+        company2004:
+            "Syarikat Pembuatan Automotif",
+
+        title2004:
+            "Jabatan Kejuruteraan IT – Infrastruktur & Sistem Kejuruteraan",
+
+        exp2004_1:
+            "Menyokong infrastruktur IT dalaman dan rakan kongsi, aplikasi kejuruteraan serta persekitaran pembangunan perisian",
+
+        exp2004_2:
+            "Mereka bentuk dan melaksanakan penyelesaian infrastruktur untuk sistem baharu dan projek IT",
+
+        exp2004_3:
+            "Terlibat dalam keseluruhan kitaran hayat projek termasuk reka bentuk teknikal, pelaksanaan, pengujian, deployment dan serahan kepada operasi",
+
+        exp2004_4:
+            "Mengurus perubahan infrastruktur, upgrade dan isu teknikal sambil memastikan kestabilan serta ketersediaan sistem",
+
+        exp2004_5:
+            "Memberikan sokongan teknikal secara hands-on untuk sistem kejuruteraan yang kritikal kepada operasi perniagaan",
+
+
+        company2002:
+            "Syarikat Managed IT Services",
+
+        title2002:
+            "System Analyst & Sokongan Tahap Pertama – Rantau APAC",
+
+        exp2002_1:
+            "Memberikan sokongan tahap pertama untuk infrastruktur sistem APAC yang merangkumi Windows/Unix, Network & Security, DR dan SAN/Storage",
+
+        exp2002_2:
+            "Mengurus insiden, troubleshooting dan escalation mengikut SLA serta prosedur pengurusan perkhidmatan",
+
+        exp2002_3:
+            "Menyokong availability infrastruktur, monitoring dan kesinambungan operasi",
+
+        exp2002_4:
+            "Terlibat dalam Incident, Change dan Service Request Management dalam persekitaran berasaskan ITIL",
+
+
+        company2001:
+            "Syarikat Pembuatan PCB & Semikonduktor",
+
+        title2001:
+            "System Administrator / Sales Engineer / PCB Design Engineer",
+
+        exp2001_1:
+            "Menyokong pentadbiran sistem dan persekitaran kejuruteraan bagi operasi reka bentuk elektrik dan elektronik",
+
+        exp2001_2:
+            "Memasang, mengkonfigurasi dan menyokong sistem HP-UX serta persekitaran reka bentuk CAD",
+
+        exp2001_3:
+            "Menyediakan system setup, scripting, pengurusan engineering data library dan technical troubleshooting",
+
+        exp2001_4:
+            "Menyelaras dengan pembekal dan pelanggan bagi memahami keperluan teknikal serta menyokong penyelesaian kejuruteraan",
+
+        exp2001_5:
+            "Menyediakan dan menyelenggara dokumentasi teknikal, prosedur kerja dan jadual projek"
+    }
+
+};
+
+
+/* =========================================================
+   LANGUAGE DETECTION
+   ========================================================= */
+
+function detectBrowserLanguage() {
+
+    const browserLanguages =
+        navigator.languages && navigator.languages.length
+            ? navigator.languages
+            : [navigator.language || "en"];
+
+    for (const browserLanguage of browserLanguages) {
+
+        const language =
+            browserLanguage.toLowerCase().split("-")[0];
+
+        if (language === "ja") {
+            return "jp";
+        }
+
+        if (language === "ar") {
+            return "ar";
+        }
+
+        if (language === "ms") {
+            return "my";
+        }
+
+        if (language === "en") {
+            return "en";
+        }
+    }
+
+    return "en";
+}
+
+
+/* =========================================================
+   LANGUAGE SWITCHING
+   ========================================================= */
+
+function setLanguage(lang, savePreference = true) {
+
+    if (!translations[lang]) {
+        lang = "en";
+    }
+
+    const dictionary = translations[lang];
+
+
+    /* ================================================
+       TRANSLATE PAGE
+       ================================================ */
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+
+        const key =
+            element.getAttribute("data-i18n");
+
+        if (dictionary[key] !== undefined) {
+            element.textContent = dictionary[key];
+        }
+
+    });
+
+
+    /* ================================================
+       ACTIVE LANGUAGE BUTTON
+       ================================================ */
+
+    document.querySelectorAll(".lang-btn").forEach(button => {
+
+        button.classList.toggle(
+            "active",
+            button.dataset.lang === lang
+        );
+
+    });
+
+
+    /* ================================================
+       RTL / LTR
+       ================================================ */
+
+    if (lang === "ar") {
+
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
+
+        document.body.classList.add("rtl");
+
+    } else {
+
+        document.documentElement.lang = lang;
+        document.documentElement.dir = "ltr";
+
+        document.body.classList.remove("rtl");
+
+    }
+
+
+    /* ================================================
+       SAVE LANGUAGE
+       ================================================ */
+
+    if (savePreference) {
+        localStorage.setItem("cvLanguage", lang);
+    }
+
+
+    /* ================================================
+       DOCUMENT TITLE
+       ================================================ */
+
+    const titles = {
+
+        en:
+            "Professional CV - Suhaimi Masri",
+
+        jp:
+            "職務経歴書 - Suhaimi Masri",
+
+        ar:
+            "السيرة المهنية - Suhaimi Masri",
+
+        my:
+            "CV Profesional - Suhaimi Masri"
+
+    };
+
+    document.title = titles[lang];
+
+
+    /* ================================================
+       UPDATE CAROUSEL
+       ================================================ */
+
+    updateCarousel();
+}
+
+
+/* =========================================================
+   CAROUSEL
+   ========================================================= */
+
+let currentSlide = 0;
+
+const slides =
+    document.querySelectorAll(".carousel-slide");
+
+const totalSlides =
+    slides.length;
+
+document.getElementById("totalSlides").textContent =
+    totalSlides;
+
+
+function updateCarousel() {
+
+    const track =
+        document.getElementById("carouselTrack");
+
+    const isRTL =
+        document.documentElement.dir === "rtl";
+
+
+    if (isRTL) {
+
+        track.style.transform =
+            `translateX(${currentSlide * 100}%)`;
+
+    } else {
+
+        track.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
+
+    }
+
+
+    document.getElementById("currentSlide").textContent =
+        currentSlide + 1;
+
+
+    const buttons =
+        document.querySelectorAll(".carousel-btn");
+
+
+    if (buttons.length >= 2) {
+
+        buttons[0].disabled =
+            currentSlide === 0;
+
+        buttons[1].disabled =
+            currentSlide === totalSlides - 1;
+
+    }
+}
+
+
+function nextSlide() {
+
+    if (currentSlide < totalSlides - 1) {
+
+        currentSlide++;
+
+        updateCarousel();
+
+    }
+}
+
+
+function prevSlide() {
+
+    if (currentSlide > 0) {
+
+        currentSlide--;
+
+        updateCarousel();
+
+    }
+}
+
+
+/* =========================================================
+   VIEW TOGGLE
+   ========================================================= */
+
+function toggleView(view) {
+
+    const carouselView =
+        document.getElementById("carouselView");
+
+    const accordionView =
+        document.getElementById("accordionView");
+
+    const buttons =
+        document.querySelectorAll(".view-btn");
+
+
+    if (view === "carousel") {
+
+        carouselView.classList.add("active");
+
+        accordionView.classList.remove("active");
+
+        buttons[0].classList.add("active");
+
+        buttons[1].classList.remove("active");
+
+        currentSlide = 0;
+
+        updateCarousel();
+
+    } else {
+
+        accordionView.classList.add("active");
+
+        carouselView.classList.remove("active");
+
+        buttons[1].classList.add("active");
+
+        buttons[0].classList.remove("active");
+
+    }
+}
+
+
+/* =========================================================
+   ACCORDION
+   ========================================================= */
+
+function toggleAccordion(element) {
+
+    document.querySelectorAll(".accordion").forEach(acc => {
+
+        if (acc !== element) {
+            acc.classList.remove("active");
+        }
+
+    });
+
+    element.classList.toggle("active");
+}
+
+
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /*
+     * If the visitor previously selected a language,
+     * use that language.
+     *
+     * Otherwise detect the browser language.
+     */
+
+    const savedLanguage =
+        localStorage.getItem("cvLanguage");
+
+    if (
+        savedLanguage &&
+        translations[savedLanguage]
+    ) {
+
+        setLanguage(
+            savedLanguage,
+            false
+        );
+
+    } else {
+
+        const browserLanguage =
+            detectBrowserLanguage();
+
+        setLanguage(
+            browserLanguage,
+            false
+        );
+    }
+
+
+    updateCarousel();
+
+});
+
+
+/* =========================================================
+   KEYBOARD SUPPORT
+   ========================================================= */
+
+document.addEventListener("keydown", function(event) {
+
+    /*
+     * Only control carousel when carousel view is active.
+     */
+
+    const carouselView =
+        document.getElementById("carouselView");
+
+    if (!carouselView.classList.contains("active")) {
+        return;
+    }
+
+
+    if (event.key === "ArrowRight") {
+
+        if (
+            document.documentElement.dir === "rtl"
+        ) {
+            prevSlide();
+        } else {
+            nextSlide();
+        }
+
+    }
+
+
+    if (event.key === "ArrowLeft") {
+
+        if (
+            document.documentElement.dir === "rtl"
+        ) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
